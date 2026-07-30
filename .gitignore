@@ -1,0 +1,21 @@
+﻿# 環境変数・秘密情報
+.env
+.env.local
+.env.production.local
+.env.development.local
+.env.test.local
+.env.*.local
+
+# 環境変数の記入例だけは保存可能
+!.env.example
+
+# Vercelのローカル設定
+.vercel/
+
+# Windows・Macの自動生成ファイル
+Thumbs.db
+.DS_Store
+
+# 一時ファイル
+*.tmp
+*.temp
