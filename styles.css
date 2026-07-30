@@ -212,7 +212,9 @@ a {
 .pricing-primary,
 .pricing-secondary,
 .faq-item,
-.final-cta-box {
+.final-cta-box,
+.contact-form-wrap,
+.thanks-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -479,6 +481,10 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.process-grid-wide {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .service-price,
 .big-price {
   display: block;
@@ -519,25 +525,143 @@ a {
   padding-bottom: 104px;
 }
 
-.final-cta-box {
+.contact-form-wrap {
+  padding: 28px 28px 32px;
+  background: #fff;
+}
+
+.contact-header {
+  margin-bottom: 28px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-header h2 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+}
+
+.contact-header p,
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.form-row > label:first-child {
+  padding-top: 14px;
+  font-size: 0.96rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font: inherit;
+  color: var(--text);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(19, 99, 223, 0.2);
+  border-color: var(--accent);
+}
+
+.radio-group {
   display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-top: 10px;
+}
+
+.radio-group label {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 38px;
-  background: linear-gradient(135deg, #0f172a, #15356b);
-  border-color: transparent;
+  gap: 6px;
+  color: var(--muted);
 }
 
-.final-cta-box h2,
-.final-cta-box p,
-.final-cta-box .eyebrow,
-.contact-note {
+.radio-group input {
+  width: auto;
+  margin: 0;
+}
+
+.textarea-row {
+  align-items: start;
+}
+
+.form-submit {
+  padding-left: 162px;
+}
+
+.submit-button {
+  min-width: 124px;
+  min-height: 42px;
+  padding: 0 20px;
+  border: 0;
+  background: #2f93ef;
   color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.final-cta-box p {
-  color: rgba(255, 255, 255, 0.84);
+.submit-button:hover {
+  background: #1f82df;
+}
+
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+}
+
+.form-note {
+  margin-top: 18px;
+  font-size: 0.92rem;
+}
+
+.thanks-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.thanks-card {
+  width: min(680px, 100%);
+  padding: 40px;
+  text-align: center;
+}
+
+.thanks-card h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.thanks-card p {
+  margin: 0 0 24px;
+  color: var(--muted);
 }
 
 .site-footer {
@@ -559,7 +683,8 @@ a {
 @media (max-width: 1080px) {
   .target-grid,
   .issues-grid,
-  .process-grid {
+  .process-grid,
+  .process-grid-wide {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -581,7 +706,6 @@ a {
   .strength-grid,
   .services-grid,
   .demo-grid,
-  .final-cta-box,
   .footer-inner {
     grid-template-columns: 1fr;
     flex-direction: column;
@@ -618,11 +742,25 @@ a {
   .results-grid,
   .strength-grid,
   .process-grid,
+  .process-grid-wide,
   .services-grid,
   .demo-grid,
   .deliverables-layout,
   .flow-compare {
     grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .form-row > label:first-child {
+    padding-top: 0;
+  }
+
+  .form-submit {
+    padding-left: 0;
   }
 
   .hero-actions,
@@ -652,7 +790,8 @@ a {
   .pricing-primary,
   .pricing-secondary,
   .faq-item,
-  .final-cta-box {
+  .contact-form-wrap,
+  .thanks-card {
     padding: 22px;
     border-radius: 22px;
   }
