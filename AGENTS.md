@@ -46,6 +46,13 @@
 - 顧客の個人情報をリポジトリに保存しない
 - 外部サービスへの送信や公開操作は、明示的な指示がある場合だけ行う
 
+## iCloudバックアップルール
+
+ファイルを変更する前に、以下のコマンドを実行する。
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\backup-to-icloud.ps1" -Stage before
+
 ## 作業後の確認
 
 変更後は以下を確認してください。
