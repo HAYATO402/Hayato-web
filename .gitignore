@@ -19,3 +19,6 @@ Thumbs.db
 # 一時ファイル
 *.tmp
 *.temp
+
+# Backup debug logs
+backup-debug*.txt

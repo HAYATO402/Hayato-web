@@ -44,6 +44,13 @@
 - `.env`系ファイルをGitへ追加しない
 - 個人情報や顧客情報を保存しない
 
+## iCloudバックアップルール
+
+ファイルを変更する前に、以下のコマンドを実行する。
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\backup-to-icloud.ps1" -Stage before
+
 ## 完了時の報告
 
 作業完了後は、以下を日本語で報告してください。
