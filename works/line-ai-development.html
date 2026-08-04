@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINE連携型AI開発環境 | 株式会社genes</title>
+  <meta name="description" content="スマートフォンのLINEからAIへWebサイトの確認や修正を依頼し、作業用ブランチ、バックアップ、Pull Request、人間確認を通して安全に反映する開発環境の実績です。">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b4fdb">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="../index.html">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">株式会社genes</span>
+      </a>
+      <nav class="menu">
+        <a href="#background">開発背景</a>
+        <a href="#flow">処理の流れ</a>
+        <a href="#security">安全対策</a>
+        <a href="../index.html#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="work-detail-hero">
+      <div class="container">
+        <p class="eyebrow">DEVELOPMENT WORKS</p>
+        <h1>LINE連携型<br>AI開発環境</h1>
+        <p class="lead">スマートフォンからAIにWebサイト修正を依頼し、人間の確認後に反映できる開発環境を構築しました。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="../index.html#contact">類似システムについて相談する</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="background">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">BACKGROUND</p>
+          <h2>AIへ任せながら、人間が最終決定できる環境へ</h2>
+          <p>LINEからWindows PC上のAIへ、会社Webサイトの確認や修正を依頼できる仕組みです。単にLINEとAIを接続するだけでなく、誤った変更から復旧できる構成と、人間による承認フローを組み合わせました。</p>
+        </div>
+        <div class="detail-grid">
+          <article class="detail-card"><h3>解決したかった課題</h3><p>AIへ大きな権限を与えると、正式版の誤更新、必要なファイルの削除、秘密情報の流出、誤変更の本番反映などが起こる可能性があります。</p></article>
+          <article class="detail-card"><h3>構築した仕組み</h3><p>AIの作業場所と正式版を分離し、認証、権限制限、変更履歴、バックアップ、人間による最終確認を組み合わせてリスクを抑えています。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="flow">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">SYSTEM FLOW</p>
+          <h2>実際の処理の流れ</h2>
+          <p>外出先から依頼しても、変更がそのまま正式版へ入ることはありません。</p>
+        </div>
+        <div class="system-flow">
+          <div class="system-step">LINEから依頼</div>
+          <div class="system-step">AIが確認・修正</div>
+          <div class="system-step">作業用ブランチへ保存</div>
+          <div class="system-step">バックアップ・Pull Request</div>
+          <div class="system-step">人間が確認して反映</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">SAFETY</p>
+          <h2>安全な開発のための仕組み</h2>
+        </div>
+        <div class="detail-grid">
+          <article class="detail-card"><h3>作業用ブランチ</h3><p>AIは正式版であるmainブランチを直接変更せず、作業用ブランチでコードを修正します。</p></article>
+          <article class="detail-card"><h3>変更前後のバックアップ</h3><p>作業の前後にプロジェクト全体を保存し、問題が発生した場合に元の状態へ戻せるようにします。</p></article>
+          <article class="detail-card"><h3>Pull Requestによる確認</h3><p>変更差分をGitHub上で人間が確認し、問題がないと判断された変更だけを正式版へ反映します。</p></article>
+          <article class="detail-card"><h3>秘密情報と利用者の制限</h3><p>APIキーや認証情報をGitHubへ保存せず、承認されたLINEアカウントからの指示だけを受け付けます。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="screenshots">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">ACTUAL SCREENS</p>
+          <h2>実際の運用画面</h2>
+          <p>AIの作業結果と安全確認を人間が確認でき、作業前後の状態も自動的に保存されます。</p>
+        </div>
+        <div class="screenshot-grid">
+          <figure class="screenshot-card">
+            <div class="screenshot-frame screenshot-frame-dark">
+              <img
+                src="../assets/works/ai-safety-report.jpg"
+                alt="AIが変更内容と秘密情報が含まれていないことを報告している画面"
+                width="534"
+                height="377"
+                loading="lazy"
+              >
+            </div>
+            <figcaption>
+              <strong>AIによる変更内容・安全確認の報告</strong>
+              <span>変更したルールと、APIキーや認証情報が含まれていないことを作業後に報告します。</span>
+            </figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <div class="screenshot-frame screenshot-frame-dark screenshot-frame-wide">
+              <img
+                src="../assets/works/before-after-backups.jpg"
+                alt="作業前と作業後に作成されたZIPバックアップの一覧画面"
+                width="750"
+                height="233"
+                loading="lazy"
+              >
+            </div>
+            <figcaption>
+              <strong>作業前後に自動作成されたバックアップ</strong>
+              <span>問題が起きた場合に戻せるよう、before・afterのZIPファイルを時刻ごとに保存します。</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">TECHNOLOGY</p>
+          <h2>使用技術</h2>
+        </div>
+        <ul class="tech-list">
+          <li>LINE Messaging API</li><li>Webhook</li><li>OpenClaw</li><li>OpenAI / Codex</li><li>Tailscale Funnel</li><li>Git / GitHub</li><li>GitHub Pull Request</li><li>Windows PowerShell</li><li>iCloudバックアップ</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">APPLICATIONS</p>
+          <h2>Webサイト修正以外にも応用できます</h2>
+          <p>社内資料の検索・作成、営業資料の下書き、マニュアル検索、定型データ処理など、既存業務とAIを安全に接続する仕組みへ展開できます。</p>
+        </div>
+        <div class="detail-grid">
+          <article class="detail-card"><h3>実現できたこと</h3><ul><li>外出先からスマートフォンでAIへ指示</li><li>作業用ブランチ上での修正</li><li>変更前後の自動バックアップ</li><li>差分確認と人間による最終承認</li></ul></article>
+          <article class="detail-card"><h3>今後の展開</h3><ul><li>社内資料やマニュアルの検索</li><li>商品・在庫情報の確認</li><li>営業資料の下書き作成</li><li>業務システムの操作支援</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container">
+        <div class="final-cta-box">
+          <p class="eyebrow">CONTACT</p>
+          <h2>類似するAI開発環境についてご相談ください</h2>
+          <p class="detail-lead">企業ごとの業務や既存システムに合わせ、小規模な検証環境から設計・構築します。</p>
+          <div class="final-cta-actions"><a class="button primary" href="../index.html#contact">AI導入について相談する</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><p class="footer-brand">株式会社genes</p><p>AI開発・業務自動化の設計・構築支援</p></div>
+  </footer>
+</body>
+</html>
