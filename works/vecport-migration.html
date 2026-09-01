@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VecPort Vector DB移行サービス | 株式会社genes</title>
+  <meta name="description" content="VecPortを使い、Vector DBの移行計画、データ・Metadata・Filter・検索コードの移行、検索品質検証、最終レポートまで支援する株式会社genesのサービスです。">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b4fdb">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="../index.html">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">株式会社genes</span>
+      </a>
+      <nav class="menu">
+        <a href="#overview">VecPortとは</a>
+        <a href="#validation">検証結果</a>
+        <a href="#service">サービス・料金</a>
+        <a href="../index.html#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="work-detail-hero vecport-detail-hero">
+      <div class="container vecport-detail-hero-grid">
+        <div>
+          <p class="eyebrow">VECTOR DB MIGRATION SERVICE</p>
+          <div class="vecport-version-line"><span>VecPort v0.8.0</span><span>GitHub / PyPI 公開済み</span></div>
+          <h1>Vector DB移行を、<br>検証まで完了させる。</h1>
+          <p class="lead">データ、Metadata、Filter、検索コード、検索品質まで。移行前の診断から最終Reportまでを株式会社genesが一括で支援します。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="../index.html#contact">移行PoCを相談する</a>
+          </div>
+        </div>
+        <div class="vecport-terminal" aria-label="VecPortプロジェクト実行イメージ">
+          <div class="vecport-terminal-bar"><span></span><span></span><span></span><small>vecport / migration</small></div>
+          <pre><code><span>$</span> vecport project run
+
+Assessment    <strong>PASSED</strong>
+Migration     <strong>10,000 / 10,000</strong>
+Verification  <strong>PASSED</strong>
+Recall@10     <strong>1.000</strong>
+Recommendation <strong>READY</strong></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">WHAT IS VECPORT</p>
+          <h2>DBごとの違いを吸収する、共通レイヤー</h2>
+          <p>VecPortは、Vector DBごとに異なるAPI、Filter、Migration方法を共通化するPython OSSです。アプリケーション側の移行負担を減らしながら、移行の計画・実行・検証を一つのワークフローにまとめます。</p>
+        </div>
+        <div class="vecport-wide-architecture" aria-label="ApplicationからVecPortを経由して各Vector DBへ接続する構成">
+          <div class="vecport-wide-node">Application</div>
+          <span aria-hidden="true">→</span>
+          <div class="vecport-wide-node vecport-wide-core">VecPort<small>Common API / Migration / Verification</small></div>
+          <span aria-hidden="true">→</span>
+          <div class="vecport-wide-dbs"><span>Qdrant</span><span>Pinecone</span><span>Weaviate</span><span>Milvus</span><span>pgvector</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="capabilities">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">CAPABILITIES</p>
+          <h2>移行作業に必要な判断と検証を共通化</h2>
+          <p>単にVectorをコピーするのではなく、互換性、変換、再開、品質確認、納品レポートまで扱います。</p>
+        </div>
+        <div class="vecport-capability-grid">
+          <article class="detail-card"><span>01</span><h3>Common API &amp; Filter DSL</h3><p>5種類のVector DBを共通APIで操作。<code>$eq / $lt / $in / $and / $or</code>などのFilterをDBごとの差を吸収して利用できます。</p></article>
+          <article class="detail-card"><span>02</span><h3>Migration Control</h3><p>Dry Run、Resume、進捗率、ETA、Conflict処理に対応し、途中経過を確認しながら移行を進めます。</p></article>
+          <article class="detail-card"><span>03</span><h3>Plan &amp; Compatibility</h3><p>Dimension、Distance Metric、Capabilitiesを移行前に診断し、実行可否と注意点を整理します。</p></article>
+          <article class="detail-card"><span>04</span><h3>Metadata Transform</h3><p>rename、drop、default、int・float・boolなどの型変換を定義し、移行先に合わせてMetadataを整えます。</p></article>
+          <article class="detail-card"><span>05</span><h3>Verification &amp; Quality</h3><p>件数、ID、Vector、Metadataに加え、Recall@K、Top-1一致率、Top-K overlap、Latencyを比較します。</p></article>
+          <article class="detail-card"><span>06</span><h3>Code &amp; Customer Report</h3><p>既存Python検索コードの変更案を生成し、MigrationからRecall、Latencyまでを顧客向けReportに統合します。</p></article>
+        </div>
+        <div class="vecport-feature-strip">
+          <span>Benchmark p50 / p95 / p99</span>
+          <span>vecport project run</span>
+          <span>LangChain / LlamaIndex</span>
+          <span>Third-party Drivers</span>
+          <span>GitHub Actions / CI</span>
+          <span>PyPI Trusted Publishing</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section vecport-validation-section" id="validation">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">REAL DATABASE VALIDATION</p>
+          <h2>10,000 vectorsの実DB移行を完走</h2>
+          <p>模擬案件としてQdrantからMilvusへ、Metadata変換、Filter、Python検索コードを含むMigration PoCを実施しました。</p>
+        </div>
+        <div class="vecport-validation-layout">
+          <div class="vecport-migration-spec">
+            <p class="vecport-panel-label">MIGRATION SPEC</p>
+            <div><span>Source</span><strong>Qdrant</strong></div>
+            <div><span>Target</span><strong>Milvus</strong></div>
+            <div><span>Vectors</span><strong>10,000</strong></div>
+            <div><span>Dimensions</span><strong>128</strong></div>
+            <div><span>Included</span><strong>Metadata / Filter / Python Code</strong></div>
+          </div>
+          <div class="vecport-result-board">
+            <div><span>Migration Verification</span><strong>10,000 / 10,000</strong><small>PASSED</small></div>
+            <div><span>Recall@10</span><strong>1.000</strong><small>PRESERVED</small></div>
+            <div><span>Top-1 Match Rate</span><strong>100%</strong><small>MATCHED</small></div>
+            <div class="vecport-result-final"><span>Final Recommendation</span><strong>READY</strong><small>FOR MIGRATION</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">SERVICE &amp; PRICING</p>
+          <h2>小規模PoCから、移行可能性を確認</h2>
+          <p>VecPort本体は無料OSSとして公開し、株式会社genesが移行作業・判断・検証・納品をサービスとして提供します。</p>
+        </div>
+        <div class="vecport-package-grid">
+          <article class="vecport-package-card">
+            <p>Small Migration PoC</p>
+            <strong>50,000円<small>（税別）</small></strong>
+            <span>小規模な移行対象を使い、移行可能性と検索品質を確認します。</span>
+          </article>
+          <article class="vecport-package-card vecport-package-featured">
+            <p>Small Migration PoC Plus</p>
+            <strong>100,000円<small>（税別）</small></strong>
+            <span>対象DBと要件を確認したうえで、実施範囲を整理して提供します。</span>
+          </article>
+        </div>
+        <div class="vecport-scope-card">
+          <div>
+            <p class="vecport-panel-label">SMALL POC SCOPE</p>
+            <h3>基本提供範囲</h3>
+          </div>
+          <ul>
+            <li>1 DB → 1 DB</li>
+            <li>1 Collection</li>
+            <li>最大10,000 vectors</li>
+            <li>Migration Plan</li>
+            <li>データ移行</li>
+            <li>Metadata変換</li>
+            <li>Filter確認</li>
+            <li>検索コード変更案</li>
+            <li>Verification</li>
+            <li>Recall / Latency比較</li>
+            <li>最終Report</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="workflow">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">WORKFLOW</p>
+          <h2>診断から納品まで、一つのワークフローで実行</h2>
+        </div>
+        <div class="system-flow vecport-workflow">
+          <div class="system-step">Assessment<small>現状・互換性診断</small></div>
+          <div class="system-step">Migration Plan<small>条件と手順を設計</small></div>
+          <div class="system-step">Migration<small>変換・移行を実行</small></div>
+          <div class="system-step">Verification<small>データと品質を確認</small></div>
+          <div class="system-step">Final Report<small>判断材料を納品</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ecosystem">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">OSS ECOSYSTEM</p>
+          <h2>無料OSSを技術基盤に、移行完了をサービス化</h2>
+          <p>コードそのものではなく、移行を安全に完了させる作業・判断・検証・納品を提供します。</p>
+        </div>
+        <div class="vecport-business-flow">
+          <div><strong>VecPort OSS</strong><span>無料 / GitHub / PyPI</span></div>
+          <b aria-hidden="true">→</b>
+          <div><strong>技術証明・集客</strong><span>実DB検証と公開機能</span></div>
+          <b aria-hidden="true">→</b>
+          <div><strong>株式会社genes</strong><span>Vector DB Migration Service</span></div>
+          <b aria-hidden="true">→</b>
+          <div><strong>5万円 / 10万円 / 25万円〜</strong><span>PoCから本移行へ</span></div>
+        </div>
+        <div class="detail-grid vecport-ecosystem-grid">
+          <article class="detail-card"><h3>OSSとして拡張できる設計</h3><p>Driver Compliance、Python Entry Points、Third-party Driver自動発見、Plugin Developer Kitを備えています。</p></article>
+          <article class="detail-card"><h3>秘密情報を混入させない運用</h3><p>API Key、顧客コード、顧客データ、Report、接続URLなどをGitHubへ混入させない設計です。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container">
+        <div class="final-cta-box">
+          <p class="eyebrow">CONTACT</p>
+          <h2>Vector DB移行の小規模PoCからご相談ください</h2>
+          <p class="detail-lead">現在のDB、移行先候補、データ規模、検索条件を確認し、実行範囲を整理します。</p>
+          <div class="final-cta-actions"><a class="button primary" href="../index.html#contact">移行について相談する</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><p class="footer-brand">株式会社genes</p><p>VecPort / Vector DB Migration Service</p></div>
+  </footer>
+</body>
+</html>
