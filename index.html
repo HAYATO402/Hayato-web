@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>株式会社genes | 専門商社向けAI受託サービス</title>
+  <title>株式会社genes | AI業務改善・導入支援</title>
   <meta
     name="description"
-    content="株式会社genesは、専門商社・卸売会社の受発注、見積、商品検索、英文メール対応を、今の業務フローを大きく変えずにAIで改善し、導入後の運用定着まで支援します。"
+    content="株式会社genesは、企業の受発注、見積、商品検索、英文メール対応を、今の業務フローを大きく変えずにAIで改善し、導入後の運用定着まで支援します。"
   >
   <meta name="google-site-verification" content="FvM9-gZuSsZdyzN4kciWGEJbBOXkk09loGyepY-PZ0w">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -16,10 +16,10 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="株式会社genes">
-  <meta property="og:title" content="株式会社genes | 専門商社向けAI受託サービス">
+  <meta property="og:title" content="株式会社genes | AI業務改善・導入支援">
   <meta
     property="og:description"
-    content="専門商社・卸売会社の受発注、見積、商品検索、英文メール対応をAIで改善し、導入後の運用定着まで支援します。"
+    content="企業の受発注、見積、商品検索、英文メール対応をAIで改善し、導入後の運用定着まで支援します。"
   >
   <meta property="og:url" content="https://hayato-web-rho.vercel.app/">
   <meta name="twitter:card" content="summary">
@@ -30,7 +30,7 @@
       "name": "株式会社genes",
       "url": "https://hayato-web-rho.vercel.app/",
       "email": "mailto:67890hayato@gmail.com",
-      "description": "専門商社・卸売会社向けに、受発注、見積、商品検索、英文メール対応などのAI業務改善と運用定着を支援する会社です。",
+      "description": "企業向けに、受発注、見積、商品検索、英文メール対応などのAI業務改善と運用定着を支援する会社です。",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
@@ -43,6 +43,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="interactions.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -63,11 +64,11 @@
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero interactive-hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">AI FOR TRADING COMPANIES</p>
-          <h1>専門商社の受発注・見積業務に、<br>短期間で使えるAIを。</h1>
+          <p class="eyebrow">AI FOR BUSINESS OPERATIONS</p>
+          <h1>受発注・見積業務に、<br>短期間で使えるAIを。</h1>
           <p class="lead">
             メール、PDF、Excelを使った現在の業務を大きく変えず、負担の大きい1業務からAIを導入します。
             データ整理、初期設定、権限設計、操作方法、効果測定まで一貫して支援します。
@@ -76,10 +77,26 @@
             AIを作って終わりではなく、現場で使い始められ、担当者が変わっても運用でき、成果を社内へ説明できる状態まで支援します。
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">自社でAI化できる業務を相談する</a>
+            <a class="button primary liquid-button magnetic-button" href="#contact">自社でAI化できる業務を相談する</a>
           </div>
         </div>
         <aside class="hero-panel">
+          <div class="ai-process-demo" aria-hidden="true">
+            <div class="ai-process-item">
+              <span>INPUT</span>
+              <strong>注文書.pdf</strong>
+            </div>
+            <div class="ai-process-route"><i></i></div>
+            <div class="ai-process-core">
+              <span>AI</span>
+              <small>PROCESSING</small>
+            </div>
+            <div class="ai-process-route"><i></i></div>
+            <div class="ai-process-item ai-process-output">
+              <span>OUTPUT</span>
+              <strong>Excel</strong>
+            </div>
+          </div>
           <div class="panel-card">
             <p class="panel-kicker">最初に整理すること</p>
             <div class="hero-points">
@@ -113,7 +130,7 @@
       <div class="container">
         <div class="section-head narrow">
           <p class="eyebrow">TARGET</p>
-          <h2>このような専門商社・卸売会社におすすめです</h2>
+          <h2>このような企業におすすめです</h2>
         </div>
         <div class="target-grid">
           <article class="target-card">従業員10〜100名程度</article>
@@ -181,7 +198,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">MAIN OFFER</p>
-          <h2>専門商社向け「受発注・貿易業務AI改善診断」</h2>
+          <h2>「受発注・貿易業務AI改善診断」</h2>
           <p>AIを導入できる状態まで、業務・データ・担当者・権限を整理する診断です。</p>
         </div>
         <div class="offer-layout">
@@ -272,7 +289,7 @@
           <p>スマートフォンからWindows PC上のAIへWebサイトの確認・修正を依頼し、人間の確認後に安全に反映できる「LINE連携型AI開発環境」を構築しました。</p>
         </div>
         <div class="works-layout">
-          <div class="works-flow" aria-label="LINE連携型AI開発環境の処理フロー">
+          <div class="works-flow animated-system-flow" aria-label="LINE連携型AI開発環境の処理フロー">
             <div class="flow-node">LINE<span>スマートフォンから依頼</span></div>
             <span class="flow-arrow" aria-hidden="true">↓</span>
             <div class="flow-node">AIの司令塔<span>依頼内容と権限を確認</span></div>
@@ -321,7 +338,7 @@
         </div>
 
         <div class="vecport-showcase">
-          <div class="vecport-architecture" aria-label="VecPortの構成">
+          <div class="vecport-architecture animated-migration-flow" aria-label="VecPortの構成">
             <p class="vecport-panel-label">UNIFIED VECTOR DB LAYER</p>
             <div class="vecport-stack-node">Application</div>
             <span class="vecport-stack-arrow" aria-hidden="true">↓</span>
@@ -354,9 +371,9 @@
         </div>
 
         <div class="vecport-proof-grid" aria-label="QdrantからMilvusへの移行検証結果">
-          <div><span>Migration Verification</span><strong>10,000 / 10,000</strong><small>PASSED</small></div>
-          <div><span>Recall@10</span><strong>1.000</strong><small>Search Quality Preserved</small></div>
-          <div><span>Top-1 Match Rate</span><strong>100%</strong><small>Qdrant → Milvus</small></div>
+          <div><span>Migration Verification</span><strong data-count-to="10000" data-count-format="verified">10,000 / 10,000</strong><small>PASSED</small></div>
+          <div><span>Recall@10</span><strong data-count-to="1" data-count-format="decimal">1.000</strong><small>Search Quality Preserved</small></div>
+          <div><span>Top-1 Match Rate</span><strong data-count-to="100" data-count-format="percent">100%</strong><small>Qdrant → Milvus</small></div>
           <div class="vecport-proof-ready"><span>Final Recommendation</span><strong>READY</strong><small>128 dimensions</small></div>
         </div>
 
@@ -442,7 +459,7 @@
           <p class="eyebrow">PROCESS</p>
           <h2>導入の流れ</h2>
         </div>
-        <div class="process-grid process-grid-wide">
+        <div class="process-grid process-grid-wide timeline-grid">
           <article class="process-step"><span>STEP 1</span><h3>初回相談</h3><p>困っている業務、利用書類、データ、導入背景を確認します。</p></article>
           <article class="process-step"><span>STEP 2</span><h3>AI業務改善診断</h3><p>業務フロー、既存データ、書類形式、担当者、権限、KPIを整理します。</p></article>
           <article class="process-step"><span>STEP 3</span><h3>簡易デモ</h3><p>サンプル資料を使い、AI導入後の処理方法を再現します。</p></article>
@@ -457,10 +474,10 @@
 
     <section class="section final-cta" id="contact">
       <div class="container">
-        <div class="contact-form-wrap">
+        <div class="contact-form-wrap contact-glass">
           <div class="contact-header">
             <h2>お問い合わせ</h2>
-            <p>専門商社の受発注・見積・商品検索業務について、現在の課題や相談したい内容をお送りください。</p>
+            <p>受発注・見積・商品検索業務について、現在の課題や相談したい内容をお送りください。</p>
           </div>
           <form
             class="contact-form"
@@ -529,7 +546,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="footer-brand">株式会社genes</p>
-      <p>専門商社向けAI受託サービス / 受発注・見積・商品検索・貿易実務の改善支援</p>
+      <p>AI業務改善・導入支援 / 受発注・見積・商品検索・貿易実務の改善支援</p>
     </div>
   </footer>
 </body>
