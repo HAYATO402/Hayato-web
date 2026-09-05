@@ -481,23 +481,19 @@
           </div>
           <form
             class="contact-form"
-            action="https://formsubmit.co/hayato@genes0302.co.jp"
+            action="/api/contact"
             method="POST"
           >
-            <input type="hidden" name="_subject" value="株式会社genes お問い合わせ">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_next" value="https://hayato-web-rho.vercel.app/thanks.html">
             <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
 
             <div class="form-row">
               <label for="name">お名前</label>
-              <input id="name" name="お名前" type="text" placeholder="宝夢 平時" required>
+              <input id="name" name="お名前" type="text" maxlength="100" placeholder="宝夢 平時" required>
             </div>
 
             <div class="form-row">
               <label for="email">メールアドレス</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="homepageonpro@example.com" required>
+              <input id="email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="homepageonpro@example.com" required>
             </div>
 
             <div class="form-row">
@@ -529,15 +525,19 @@
                 id="message"
                 name="お問い合わせ内容"
                 rows="7"
+                maxlength="5000"
                 required
               ></textarea>
             </div>
 
+            <div id="contact-verification"></div>
+            <p id="contact-status" class="form-note" role="status" aria-live="polite"></p>
+            <noscript><p class="form-note">フォームにはJavaScriptが必要です。下のメールリンクから直接ご連絡ください。</p></noscript>
             <div class="form-submit">
-              <button class="submit-button" type="submit">送信する</button>
+              <button class="submit-button" type="submit" disabled>送信する</button>
             </div>
           </form>
-          <p class="form-note">送信後、迷惑送信防止のための確認画面が表示された場合は、画面の案内に沿って操作してください。フォームが利用できない場合は、<a href="mailto:hayato@genes0302.co.jp">hayato@genes0302.co.jp に直接メールを送る</a>こともできます。</p>
+          <p class="form-note">お問い合わせはResendを通じて送信し、迷惑送信防止にCloudflare Turnstileを使用します。フォームが利用できない場合は、<a href="mailto:hayato@genes0302.co.jp">hayato@genes0302.co.jp に直接メールを送る</a>こともできます。</p>
         </div>
       </div>
     </section>
@@ -549,5 +549,6 @@
       <p>AI業務改善・導入支援 / 受発注・見積・商品検索・貿易実務の改善支援</p>
     </div>
   </footer>
-</body>
+    <script src="/contact.js" defer></script>
+  </body>
 </html>

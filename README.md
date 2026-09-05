@@ -24,7 +24,8 @@ mainブランチに反映された内容が、Vercelを通じて本番サイト�
 - GitHub
 - Vercel
 
-現在はNode.jsやNext.jsを使用しない、静的なWebサイトです。
+画面はHTML/CSSの静的サイトです。お問い合わせ送信のみVercelのNode.js FunctionとResendを使用します。Next.jsは使用しません。
+本番設定と送信テストの手順は [お問い合わせ送信の設定](docs/contact-email-setup.md) を参照してください。
 
 ## 主なファイル
 
